@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+dialog#modal{
+    z-index: 5;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width:95vw;
+    height:95vh;
+    background: rgba(0, 0, 0, .9);
+    
+}
+dialog#modal img{
+    width: 30%;
+    
+    
+}
+
+
+.card-body {
+    transition: all .5s;
+}
+
+
+.card-img {
+    filter: grayscale(0.6);
+}
+ 
+
+.card:hover .card-body {
+    scale: 1.08;
+}
+
+.card:hover .card-img{
+    filter: grayscale(0);
+    filter: contrast(1);
+    filter: brightness(1);
+
+}
