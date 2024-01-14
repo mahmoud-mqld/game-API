@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding-top: 45px;
+    background: url(../assets/wallpaperflare.com_wallpaper\(1\).jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: aliceblue;
+}
+.container {
+    margin: auto;
+
+}
+
+.card.col-md-3{
+    background-color: transparent;
+border: none;
+color: aliceblue;
+
+}
+.card-body{
+    border-radius: 25px;
+    background: rgba(238, 235, 235, 0.4);
+
+}
+.card-text {
+    border-radius: 5px;
+font-weight: 600;
+    padding: 5px;
+    background: rgba(0, 0, 0, .7);
+}
+.card-footer p,a{
+    border-radius: 10px;
+    padding: 5px;
+    background: rgba(0, 0, 0, .7) !important;
+
+}
+dialog#modal {
+    z-index: 5;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 95vw;
+    height: 95vh;
+    background: rgba(0, 0, 0, .9);
+
+}
+
+dialog#modal img {
+    width: 30%;
+
+
+}
+
+
+.card-body {
+    transition: all .5s;
+}
+
+
+.card-img {
+    filter: grayscale(0.6);
+}
+
+
+.card:hover .card-body {
+    scale: 1.08;
+}
+
+.card:hover .card-img {
+    filter: grayscale(0);
+    filter: contrast(1);
+    filter: brightness(1);
+
+}
+
+nav li {
+    cursor: pointer;
+    transform-origin: top;
+    transition: all .4s;
+    /* margin-top: -25px; */
+    background-color: cadetblue;
+    padding: 10px 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+
+
+nav li:is(:active, :focus, :visited, :target-within) {
+    animation: rotate .2s ease-out;
+    scale: 1.02;
+}
+
+/* 
+nav li:is(:hover) {
+    animation: background .5s;
+    scale: 1.02;
+} */
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0deg)
+    }
+
+    50% {
+        transform: rotateX(-50deg)
+    }
+
+    90% {
+        transform: rotateX(50deg)
+    }
+}
+
+@keyframes background {
+    0% {
+        background: linear-gradient(-120deg, #dfdf 100%, red 0%);
+    }
+
+    20% {
+        background: linear-gradient(-120deg, #dfdf 80%, red 20%);
+    }
+
+    40% {
+        background: linear-gradient(-120deg, #dfdf 60%, red 40%);
+    }
+
+    60% {
+        background: linear-gradient(-120deg, #dfdf 40%, red 60%);
+    }
+
+    80% {
+        background: linear-gradient(-120deg, #dfdf 20%, red 80%);
+    }
+
+    99% {
+        background: linear-gradient(-120deg, #dfdf 0%, red 100%);
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    nav {
+    
+     left: 0 !important;
+     bottom: 0 !important;;  
+     width: fit-content !important;  
+
+    }
+
+    nav ul {
+     flex-direction: column;
+     height: 100vh;
+    
+    }
+    nav li {
+        text-align: center;
+      border-radius:0 10px 10px 0 ;
+      padding: 5px 3px;
+    }
+
+    div.container.row {
+        /* margin-left: auto !important; */
+        /* margin-right: auto !important; */
+    }
+
+    div#card.card.col-md-3 {
+       width: 72vw;
+       margin-left: auto;
+    }
+}
